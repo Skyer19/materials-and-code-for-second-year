@@ -1,0 +1,19 @@
+﻿生成启动时间为 2021/5/8 16:24:16。
+     1>项目“C:\temp\To_ASM\To_ASM\To_ASM.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“Release\To_ASM.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         所有输出均为最新。
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Release\To_ASM.pch" /FAcs /Fa"C:\temp\To_ASM\Release\\" /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt 1111.cpp
+         1111.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\temp\To_ASM\Release\To_ASM.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\To_ASM.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\temp\To_ASM\Release\To_ASM.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\temp\To_ASM\Release\To_ASM.lib" /MACHINE:X86 Release\1111.obj
+         Release\stdafx.obj
+         Release\To_ASM.obj
+     1>To_ASM.obj : error LNK2005: _wmain 已经在 1111.obj 中定义
+     1>C:\temp\To_ASM\Release\To_ASM.exe : fatal error LNK1169: 找到一个或多个多重定义的符号
+     1>已完成生成项目“C:\temp\To_ASM\To_ASM\To_ASM.vcxproj”(build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:00.15
