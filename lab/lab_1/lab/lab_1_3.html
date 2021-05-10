@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    input.kuang {
+        height: 30px;
+        width: 300px;
+        border-style: solid;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    select {
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    /*.one{*/
+    /*    left: 500px;*/
+    /*    top: 100px;*/
+    /*}*/
+    .inputth {
+        display: inline-table;
+        vertical-align: top;
+    }
+</style>
+<body>
+<div>
+    <span><img src="../img/register/email-bg.jpg"/></span>
+
+    <span style="margin-left: 10px;margin-bottom: 10px">注册邮箱账号</span>
+    <br><br>
+</div>
+
+<div style="border:1px solid #CCC"></div>
+
+<form class="one" align="center">
+    <label style="margin-left: 80px">
+        <span>邮箱账号</span>
+        <input class="kuang" type="text" name="email">
+    </label>
+
+    <div class="inputth">
+        <span style="font-size: 2px">请输入您的常用邮箱</span>
+        <br>
+        <span style="font-size: 2px">创建邮箱或注册普通qq号</span>
+    </div>
+    <br>
+    <label style="margin-right: 20px">昵称
+        <input class="kuang" type="text" name="nicheng">
+    </label>
+    <br>
+    <label style="margin-right: 20px ">密码
+        <input class="kuang" type="text" name="passwd">
+    </label>
+    <br>
+    <label style="margin-right: 50px">
+        确认密码
+        <input class="kuang" type="text" name="esure_passwd">
+    </label>
+    <br>
+</form>
+
+
+<form class="two" align="center">
+    <label style="margin-right:240px">
+    <span>性别</span>
+    <input type="radio" name="sex" id="male"/>
+    <label for="male">男</label>
+    <input type="radio" name="sex" id="female"/>
+    <label for="female">女</label>
+
+    <br>
+    <label style="margin-right: 100px">
+        <span>生日&nbsp&nbsp</span>
+        <select name="birth">
+            <option value="公历">公历</option>
+            <option value="农历">农历</option>
+        </select>
+        <input type="date" name="date" id="date"/>
+ </label>
+</form>
+
+<form class="three" align="center">
+    <div>
+        <span>所在地</span>
+        <select name="country">
+            <option value="cn">中国</option>
+            <option value="en">其他国家</option>
+        </select>
+        <select name="city">
+            <option value="sh">上海</option>
+            <option value="qt">其他城市</option>
+        </select>
+        <select name="area">
+            <option value="sh">黄埔</option>
+            <option value="qt">其他</option>
+        </select>
+    </div>
+    <br>
+    <div>
+        验证码 <img src="../img/register/yz.png" style="width: 200px" height="32" align="center"> 请先进行安全验证
+        <br>
+        <input name="checkbox" type="checkbox" value="checkbox">
+        <span align="center">我已阅读并同意相关服务条款和隐私政策</span>
+        <span><img src="../img/register/down.jpg"/></span>
+    </div>
+</form>
+
+<p align="center"><img src="../img/register/register.jpg" style="width: 200px" height="32"></p>
+</body>
+</html>
