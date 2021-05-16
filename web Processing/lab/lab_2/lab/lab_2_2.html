@@ -54,13 +54,17 @@
         width: 68%;
         height: 36px;
         padding-top: 8px;
-        border-bottom: 2px solid rgb(0,169,165)
+        border-bottom: 2px solid rgb(0,169,165);
+
     }
     .mainlink_items{
         margin-left: 40px;
         margin-right: 40px;
         font-size: 13px;
+        text-decoration: none;
+        color: black;
     }
+
     .content{
         width: 68%;
         height: 770px;
@@ -88,17 +92,17 @@
         margin-top: 20px;
     }
     .favorite_pic{
-        /*border: 1px solid black;*/
+        border: 1px solid black;
         width: 100px;
         height: 100px;
         margin-left: 10px;
         margin-right: 10px;
-        display:inline
+        display: inline-block;
     }
     #recent_browsing_name{
         /*border: 1px solid black;*/
         width: 500px;
-        margin-left: 40px;
+        margin-left: 30px;
         margin-top: 30px;
     }
 
@@ -110,7 +114,7 @@
     #recent_browsing_price{
         /*border: 1px solid black;*/
         width: 500px;
-        margin-left: 40px;
+        margin-left: 30px;
         margin-top: 10px;
     }
     .rec_bro_price{
@@ -194,7 +198,7 @@
                     </label>
                 <!--search icon-->
                     <div id="search_icon">
-                    <img  src="../img/lab_2_2/fangdajing_03.png" height="22" width="25"/>
+                    <a href="#"><img  src="../img/lab_2_2/fangdajing_03.png" height="22" width="25"/></a>
                     </div>
                 </div>
                 <!--top down information-->
@@ -203,13 +207,13 @@
         </div>
         <div class="main" align="center">
             <div class="mainlink" align="center">
-                <a class="mainlink_items">热推</a>
-                <a class="mainlink_items">银饰分类</a>
-                <a class="mainlink_items">精选系列</a>
-                <a class="mainlink_items">银饰定制</a>
-                <a class="mainlink_items">礼品中心</a>
-                <a class="mainlink_items">品牌故事</a>
-                <a class="mainlink_items">会员中心</a>
+                <a href="#" class="mainlink_items">热推</a>
+                <a href="#"  class="mainlink_items">银饰分类</a>
+                <a href="#"  class="mainlink_items">精选系列</a>
+                <a href="#"  class="mainlink_items">银饰定制</a>
+                <a href="#" class="mainlink_items">礼品中心</a>
+                <a href="#"  class="mainlink_items">品牌故事</a>
+                <a href="#"  class="mainlink_items">会员中心</a>
             </div>
 
             <div class="content" align="centers">
@@ -221,34 +225,34 @@
                     <hr width="90%"/>
                     <!--recent browsing and your favorite character-->
                     <div id="left_bottom" align="left">
-                        <a>你会喜欢</a>
-                        <a style="color: rgb(0,169,165)">最近浏览</a>
+                        <a href="#" style="text-decoration: none">你会喜欢</a>
+                        <a href="#" style="color: rgb(0,169,165);text-decoration: none">最近浏览</a>
                     </div>
                     <!--recent browsing and your favorite pictures-->
-                    <div id="recent_browsing" >
+                    <div id="recent_browsing"
                         <!--picture 1-->
                         <div class="favorite_pic">
-                            <img src="../img/lab_2_2/11.png" height="100" width="100"/></div>
+                            <a href="#"><img src="../img/lab_2_2/11.png" height="100" width="100"/></a></div>
                         <!--picture 2-->
                         <div class="favorite_pic">
-                            <img src="../img/lab_2_2/22.png" height="100" width="100"/></div>
+                            <a href="#"><img src="../img/lab_2_2/22.png" height="100" width="100"/></a></div>
                         <!--picture 3-->
                         <div class="favorite_pic">
-                            <img src="../img/lab_2_2/33.png" height="100" width="100"/></div>
+                            <a href="#"><img src="../img/lab_2_2/33.png" height="100" width="100"/></a></div>
                         <!--picture 4-->
                         <div class="favorite_pic">
-                            <img src="../img/lab_2_2/44.png" height="100" width="100"/></div>
+                            <a href="#"><img src="../img/lab_2_2/44.png" height="100" width="100"/></a></div>
                     </div>
                     <!--recent browsing name-->
-                    <div id="recent_browsing_name">
+                    <div id="recent_browsing_name" align="center">
 
                         <a class="rec_bro_name">Nirva纯银</a>
                         <a class="rec_bro_name">Heart穿孔耳环</a>
-                        <a class="rec_bro_name">Attract纯银戒指.9</a>
+                        <a class="rec_bro_name">Attract纯银戒指</a>
                         <a class="rec_bro_name">Case纯银手环</a>
                     </div>
                     <!--recent browsing price-->
-                    <div id="recent_browsing_price" >
+                    <div id="recent_browsing_price" align="center">
                         <a class="rec_bro_price">¥675</a>
                         <a class="rec_bro_price">¥539</a>
                         <a class="rec_bro_price">¥334.9</a>
