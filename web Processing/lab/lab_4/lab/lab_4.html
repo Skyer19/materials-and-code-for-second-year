@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<!--头部开始-->
+<header>
+    <div class="topBanner">
+        <img id="topBanner_pic" src="../img/top/topBanner.jpg" height="119" width="1902"/></div>
+    <div class="nav">
+        <div class="navCenter">
+            <a href="#" class="navCenter_func">小米商城</a>|
+            <a href="#" class="navCenter_func">MIUI</a>|
+            <a href="#" class="navCenter_func">米聊</a>|
+            <a href="#" class="navCenter_func">游戏</a>|
+            <a href="#" class="navCenter_func">多看阅读</a>|
+            <a href="#" class="navCenter_func">云服务</a>|
+            <a href="#" class="navCenter_func">金融</a>|
+            <a href="#" class="navCenter_func">小米商城移动版</a>|
+            <a href="#" class="navCenter_func">问题反馈</a>|
+            <a href="#" class="navCenter_func">Select Region</a>
+        </div>
+        <div class="nav_right">
+            <a href="#" class="navRight_func">登陆</a> |
+            <a href="#" class="navRight_func">注册</a> |
+            <a href="#" class="navRight_func">消息通知 </a>
+            <div style="float: right;background: rgb(66,66,66);padding-bottom: 5px;padding-right:10px;margin-right: 10%;margin-top: -2px">
+                <a href="#" class="navRight_func"><img src="../img/top/111.png" height="22" width="22"/> 购物车（0)</a>
+            </div>
+        </div>
+    </div>
+</header>
+<!--头部结束-->
+<!--导航栏开始-->
+<div class="logoNav">
+    <div class="logo">
+        <img src="../img/top/logo.jpg" height="52" width="52"/></div>
+    <div class="menu" align="center">
+        <div class="menu_content"><a href="#">小米手机</a></div>
+        <div class="menu_content"><a href="#">红米</a></div>
+        <div class="menu_content"><a href="#">平板-笔记本</a></div>
+        <div class="menu_content"><a href="#">电视</a></div>
+        <div class="menu_content"><a href="#">盒子-影音</a></div>
+        <div class="menu_content"><a href="#">路由器</a></div>
+        <div class="menu_content"><a href="#">智能硬件</a></div>
+        <div class="menu_content"><a href="#">服务</a></div>
+        <div class="menu_content"><a href="#">社区</a></div>
+    </div>
+    <div class="search">
+        <div class="search_content"><a href="#">小米电视3s 48英寸</a></div>
+        <div class="search_content"><a href="#">小米MIX</a></div>
+
+    </div>
+    <div class="search_logo" align="center">
+        <a href="#"><img style="margin-top: 7px" src="../img/top/fangdajing_03.png" height="24" width="25"/></a></div>
+</div>
+<!--导航栏结束-->
+<!--轮播图栏开始-->
+<div class="banner">
+    <div class="scroll">
+        <ul>
+            <li class="item" style="display: block;">
+                <a><img src="../img/circle_column/banner1.jpg" class="lunbo"/></a></li>
+            <li class="item">
+                <a><img src="../img/circle_column/banner2.jpg" class="lunbo"/></a></li>
+            <li class="item">
+                <a><img src="../img/circle_column/banner3.jpg" class="lunbo"/></a></li>
+            <li class="item">
+                <a><img src="../img/circle_column/banner4.jpg" class="lunbo"/></a></li>
+            <li class="item">
+                <a><img src="../img/circle_column/banner5.jpg" class="lunbo"/></a></li>
+        </ul>
+    </div>
+    <div class="lr-tab">
+        <div class="left btn"></div>
+        <div class="right btn"></div>
+    </div>
+    <div class="tab-btn">
+        <ul style="list-style:none;">
+            <li class="btn"></li>
+            <li class="btn"></li>
+            <li class="btn"></li>
+            <li class="btn"></li>
+            <li class="btn"></li>
+        </ul>
+    </div>
+
+</div>
+<!--轮播图栏结束-->
+<!--轮播图js实现-->
+<!--<script type="text/javascript" src="jquery-3.3.1.js"></script>-->
+<script type="text/javascript">
+    var index2 = 0;
+    //点击点
+    $(".tab-btn .btn").click(function () {
+        index2 = $(this).index();//获取点击该元素下彪
+        $(this).addClass("active").siblings().removeClass("active");
+        $(".item").eq(index2).fadeIn().siblings().fadeOut();
+    });
+    //点击切换效果
+    $(".lr-tab .right").click(function () {
+        index2++;
+        if (index2 > 4) {
+            index2 = 0;
+        }
+        $(".item").eq(index2).fadeIn().siblings().fadeOut();
+        $(".tab-btn .btn").eq(index2).addClass("active").siblings().removeClass("active");
+
+    });
+    $(".lr-tab .left").click(function () {
+        index2--;
+        if (index2 < 0) {
+            index2 = 4;
+        }
+        $(".item").eq(index2).fadeIn().siblings().fadeOut();
+        $(".tab-btn .btn").eq(index2).addClass("active").siblings().removeClass("active");
+
+    });
+    var time2 = setInterval(function () {
+        index2++;
+        if (index2 > 4) {
+            index2 = 0;
+        }
+        $(".item").eq(index2).fadeIn().siblings().fadeOut();
+        $(".tab-btn .btn").eq(index2).addClass("active").siblings().removeClass("active");
+
+    }, 4000); //定时器 重复
+</script>
+
+<!--产品分类开始-->
+<div class="main_body">
+    <div class="smart">
+        <div class="smart_headline">
+            <div class="headline"><a href="#"><strong>智能硬件</strong></a></div>
+            <div class="more"><a href="#">查看全部 ></a></div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content_aside">
+            <a href="#"><img src="../img/smart_hardware/aside.jpg" height="580" width="230"/></a></div>
+        <div class="content_right_front" align="center">
+            <a href="#"><img src="../img/smart_hardware/4.jpg" height="220" width="215"/></a>
+            <div class="content_right_text">
+                <p>米家压力IH电饭锅</p>
+                <p style="color: rgb(210,210,210)">智能烹饪，高科技涂层内胆</p>
+                <p style="color: rgb(234, 112, 46)">999元</p>
+            </div>
+
+        </div>
+        <div class="content_right_front" align="center">
+            <a href="#"><img src="../img/smart_hardware/3.jpg" height="220" width="215"/></a>
+            <div class="content_right_text">
+                <p>米兔智能故事机</p>
+                <p style="color: rgb(210,210,210)">微信远程互动，不要买</p>
+                <p style="color: rgb(234,112,46)">199元</p>
+            </div>
+        </div>
+        <div class="content_right_front" align="center">
+            <a href="#"><img src="../img/smart_hardware/2.jpg" height="220" width="215"/></a>
+            <div class="content_right_text">
+                <p>米兔儿童手表Q</p>
+                <p style="color: rgb(210,210,210)">2月28日，买即送智能配件</p>
+                <p style="color: rgb(234, 112, 46)">299元</p>
+            </div>
+        </div>
+        <div class="content_right_front" align="center">
+            <a href="#"><img src="../img/smart_hardware/1.jpg" height="220" width="215"/></a>
+            <div class="content_right_text">
+                <p>小米VR眼镜</p>
+                <p style="color: rgb(210,210,210)">配置9轴体感手柄，硬件级加速</p>
+                <p style="color: rgb(234, 112, 46)">199元</p>
+            </div>
+        </div>
+
+        <!--占位-->
+        <div class="content_right_foot" align="center"></div>
+
+        <div class="content_right_foot" align="center">
+            <a href="#"><img src="../img/smart_hardware/8.png" height="220" width="215"/></a>
+            <div class="content_right_text">
+
+                <p>米兔定位电话</p>
+                <p style="color: rgb(210,210,210)">高清双向通话，五重精准定位</p>
+                <p style="color: rgb(234, 112, 46)">169元</p>
+            </div>
+
+        </div>
+        <div class="content_right_foot" align="center">
+            <a href="#"><img src="../img/smart_hardware/7.jpg" height="220" width="215"/></a>
+            <div class="content_right_text">
+                <p>米家小白智能摄像机</p>
+                <p style="color: rgb(210,210,210)">360全景拍摄，1080p高清摄像</p>
+                <p style="color: rgb(234, 112, 46)">399元</p>
+            </div>
+        </div>
+        <div class="content_right_foot" align="center">
+            <a href="#"><img src="../img/smart_hardware/6.jpg" height="220" width="215"/></a>
+            <div class="content_right_text">
+                <p>米兔积木机器人</p>
+                <p style="color: rgb(210,210,210)">978个零件，享受挑战双手的快乐</p>
+                <p style="color: rgb(234, 112, 46)">499元</p>
+            </div>
+        </div>
+        <div class="content_right_foot" align="center">
+            <a href="#"><img src="../img/smart_hardware/5.jpg" height="220" width="215"/></a>
+            <div class="content_right_text">
+                <p>小米米家电动滑板车</p>
+                <p style="color: rgb(210,210,210)">极简几何设计，1分钟轻松上手</p>
+                <p style="color: rgb(234, 112, 46)">1999元</p>
+            </div>
+        </div>
+    </div>
+    <!--    上面全都是智能硬件-->
+    <div class="content_all">
+        <div class="smart_headline">
+            <div class="headline"><a href="#"><strong>内容</strong></a></div>
+        </div>
+        <div class="contents">
+            <div class="contents_body" align="center" style="border-top: orange 2px solid">
+                <div class="contents_text">
+                    <p style="font-size: 15px;color: orange">图书</p>
+                    <p style="font-size: 20px">哈利波特与混血王子</p>
+                    <p style="color: rgb(210,210,210)">哈利波特第8个版本震撼来袭</p>
+                    <p style="color: rgb(210,210,210)">吧啦吧啦巴啦啦</p>
+                    <p><strong>29.37元</strong></p>
+                </div>
+                <a href="#"><img src="../img/content/1.png" height="150" width="200"/></a>
+                <ul class="banner_p" style="list-style:none;">
+                    <li class="banner_s"></li>
+                    <li class="banner_s"></li>
+                    <li class="banner_s"></li>
+                    <li class="banner_s"></li>
+                </ul>
+            </div>
+            <div class="contents_body" align="center" style="border-top: orangered 2px solid">
+                <div class="contents_text">
+                    <p style="font-size: 15px;color: orangered">MIUI主题</p>
+                    <p style="font-size: 20px">我心澎湃</p>
+                    <p style="color: rgb(210,210,210)">小米松果芯片即将发布，我心澎湃</p>
+                    <p style="color: rgb(210,210,210)">官方主题强悍来袭</p>
+                    <p><strong>0米币</strong></p>
+                </div>
+                <a href="#"><img src="../img/content/2.jpg" height="150" width="200"/></a>
+                <ul class="banner_p" style="list-style:none;">
+                    <li class="banner_s"></li>
+                    <li class="banner_s"></li>
+                    <li class="banner_s"></li>
+                    <li class="banner_s"></li>
+                </ul>
+            </div>
+            <div class="contents_body" align="center" style="border-top: red 2px solid">
+                <div class="contents_text">
+                    <p style="font-size: 15px;color: red">游戏</p>
+                    <p style="font-size: 20px">米轴手游模拟器</p>
+                    <p style="color: rgb(210,210,210)">在电脑上玩遍小米所有手游</p>
+                    <p style="color: rgb(210,210,210)">&nbsp;</p>
+                    <p><strong>免费</strong></p>
+                </div>
+                <a href="#"><img src="../img/content/3.png" height="150" width="200"/></a>
+                <ul class="banner_p" style="list-style:none;">
+                    <li class="banner_s"></li>
+                    <li class="banner_s"></li>
+                    <li class="banner_s"></li>
+                    <li class="banner_s"></li>
+                </ul>
+            </div>
+            <div class="contents_body" align="center" style="border-top: blue 2px solid">
+                <div class="contents_text">
+                    <p style="font-size: 15px;color: blue">应用</p>
+                    <p style="font-size: 20px">2017金米奖</p>
+                    <p style="color: rgb(210,210,210)">最优秀的应用和游戏</p>
+                    <p style="color: rgb(210,210,210)">&nbsp;</p>
+                    <p><strong>&nbsp;</strong></p>
+                </div>
+                <a href="#"><img src="../img/content/4.png" height="150" width="200"/></a>
+                <ul class="banner_p" style="list-style:none;">
+                    <li class="banner_s"></li>
+                    <li class="banner_s"></li>
+                    <li class="banner_s"></li>
+                    <li class="banner_s"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--产品分类结束-->
+<footer class="footer">
+    <div class="about" align="center">
+        <div class="about_content"><a href="#"><img src="../img/foot/logo-footer.png" height="20" width=20/>预约维修服务</a></div>
+        <div class="about_content"><a href="#"><img src="../img/foot/logo-footer.png" height="20" width=20/>7天无理由退货</a></div>
+        <div class="about_content"><a href="#"><img src="../img/foot/logo-footer.png" height="20" width=20/>15天免费换货</a></div>
+        <div class="about_content"><a href="#"><img src="../img/foot/logo-footer.png" height="20" width=20/>满150包邮</a></div>
+        <div class="about_content"><a href="#"><img src="../img/foot/logo-footer.png" height="20" width=20/>520家售后网店</a></div>
+    </div>
+
+    <div class="footer-links">
+        <dl class="col-links">
+            <dd style="font-size: 20px">帮助中心</dd>
+            <dd><a rel="nofollow" href="//www.mi.com/service/account/Account%20registration/" target="_blank">账户管理</a>
+            </dd>
+            <dd><a rel="nofollow" href="//www.mi.com/service/buy/SalesTime/" target="_blank">购物指南</a></dd>
+            <dd><a rel="nofollow" href="//www.mi.com/service/order/sendprogress/" target="_blank">订单操作</a></dd>
+        </dl>
+
+        <dl class="col-links">
+            <dd style="font-size: 20px">服务支持</dd>
+            <dd><a rel="nofollow" href="//www.mi.com/service/exchange" target="_blank">售后政策</a></dd>
+            <dd><a rel="nofollow" href="//www.mi.com/service/" target="_blank">自助服务</a></dd>
+            <dd><a rel="nofollow" href="//www.mi.com/service/download/" target="_blank">相关下载</a></dd>
+        </dl>
+
+        <dl class="col-links ">
+            <dd style="font-size: 20px">线下门店</dd>
+            <dd><a rel="nofollow" href="//www.mi.com/service/mihome/list" target="_blank">小米之家</a></dd>
+            <dd><a rel="nofollow" href="//www.mi.com/service/sitelist" target="_blank">服务网点</a></dd>
+            <dd><a rel="nofollow" href="//www.mi.com/service/family-location" target="_blank">授权体验店</a></dd>
+        </dl>
+
+        <dl class="col-links ">
+            <dd style="font-size: 20px">关于小米</dd>
+            <dd><a rel="nofollow" href="//www.mi.com/about/" target="_blank">了解小米</a></dd>
+            <dd><a rel="nofollow" href="//hr.xiaomi.com/" target="_blank">加入小米</a></dd>
+            <dd><a rel="nofollow" href="//company.mi.com/zh-cn/ir/indexContent/index.html" target="_blank">投资者关系</a>
+            </dd>
+        </dl>
+
+        <dl class="col-links ">
+            <dd style="font-size: 20px">关注我们</dd>
+            <dd><a rel="nofollow" href="//weibo.com/xiaomishangcheng" target="_blank">新浪微博</a></dd>
+            <dd><a rel="nofollow" href="javascript:" id="J_siteWeixinCode">官方微信</a></dd>
+            <dd><a rel="nofollow" href="//www.mi.com/about/contact/" target="_blank">联系我们</a></dd>
+        </dl>
+
+        <dl class="col-links ">
+            <dd style="font-size: 20px">特色服务</dd>
+            <dd><a rel="nofollow" href="//www.mi.com/order/fcode" target="_blank">F 码通道</a></dd>
+            <dd><a rel="nofollow" href="//www.mi.com/order/giftcode" target="_blank">礼物码</a></dd>
+            <dd><a rel="nofollow" href="//www.mi.com/service/imei" target="_blank">防伪查询</a></dd>
+        </dl>
+
+        <div class="col-contact" align="center">
+            <p class="phone">400-100-5678</p>
+            <p style="font-size: 10px">周一至周日8:00-18:00</p>
+            <p style="font-size: 10px">仅收市话费</p>
+            <div class="service24h">
+                <a href="#" style="color: orange">24小时在线客服</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="copy">
+        <div class="bottom_logo">
+            <img src="../img/foot/logo-footer.png" height="57" width="56"/>
+        </div>
+        <div class="link">
+            <p class="sites">
+                <a rel="nofollow" href="//www.mi.com/index.html" target="_blank">小米商城</a>
+                <span class="sep">|</span>
+                <a rel="nofollow" href="//www.miui.com/" target="_blank">MIUI</a>
+                <span class="sep">|</span>
+                <a rel="nofollow" href="//home.mi.com/index.html" target="_blank">米家</a>
+                <span class="sep">|</span>
+                <a rel="nofollow" href="http://www.miliao.com/" target="_blank">米聊</a>
+                <span class="sep">|</span>
+                <a rel="nofollow" href="//www.duokan.com/" target="_blank">多看</a>
+                <span class="sep">|</span>
+                <a rel="nofollow" href="//game.xiaomi.com/" target="_blank">游戏</a>
+                <span class="sep">|</span>
+                <a rel="nofollow" href="//b.mi.com/?client_id=180100031058&masid=17409.0358" target="_blank">政企服务</a>
+                <span class="sep">|</span>
+                <a rel="nofollow" href="//xiaomi.tmall.com/" target="_blank">小米天猫店</a>
+                <span class="sep">|</span>
+                <a rel="nofollow" href="//privacy.mi.com/all/zh_CN/" target="_blank">小米集团隐私政策</a>
+                <span class="sep">|</span>
+                <a rel="nofollow" href="//cdn.cnbj1.fds.api.mi-img.com/mi-mall/ded8d0e4a77d.html" target="_blank">小米商城隐私政策</a>
+                <span class="sep">|</span>
+                <a rel="nofollow" href="//static.mi.com/feedback/" target="_blank">问题反馈</a>
+                <span class="sep">|</span>
+                <a rel="nofollow" href="javascript:void(0);" class="J_siteGlobalRegion">Select Location</a>
+            </p>
+            <p class="sites" >
+                &copy;
+                <a href="#;" target="_blank" title="mi.com">mi.com</a> 京ICP证110507号
+                <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow">京ICP备10046444号</a>
+                <a rel="nofollow" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802020134"
+                   target="_blank">京公网安备11010802020134号</a>
+                <a href="//www.mi.com/culture-license/" target="_blank">京网文[2020]0276-042号</a>
+                 </p>
+            <p class="sites">违法和不良信息举报电话：171-5104-4404&nbsp;<a href='https://www.mi.com/intellectual' target="_blank">本网站所列数据，除特殊说明，所有数据均出自我司实验室测试</a></p>
+            </p>
+        </div>
+
+    <div class="verify">
+        <a><img src="../img/foot/truste.png" height="28" width="85"/></a>
+        <a><img src="../img/foot/v-logo-1.png" height="28" width="85"/></a>
+        <a><img src="../img/foot/v-logo-2.png" height="28" width="85"/></a>
+        <a><img src="../img/foot/v-logo-3.png" height="28" width="85"/></a>
+    </div>
+    <div class="slogan" align="center">
+        <img src="../img/foot/slogan2016.png" height="19" width="267"/></div>
+    </div>
+</footer>
+</body>
+</html>
