@@ -24,6 +24,7 @@ if (access ("my_pipe", F_OK) == -1) /*doesn’t exist */
 	}
 else
 printf("Using existing named pipe \n");
+
 /* Check command line parameter count, it should be 2.
 Check 2 nd parameter is either “reader” or “writer” and open
 the pipe accordingly */
