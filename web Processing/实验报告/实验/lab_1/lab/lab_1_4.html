@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab1-Question4</title>
+    <link rel="stylesheet" href="Question4.css">
+    <style>
+        p{
+    display: inline-block;
+}
+#topBox{
+    width: 200px;
+    height: 60px;
+    background: green;
+}
+#topBox ul{
+    display: inline-block;
+    list-style: none;
+    margin-top: 20px;
+}
+#topBox ul li{
+    display: inline-block;
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: large;
+}
+#middleBox{
+    display: block;
+}
+#middleBoxLeft{
+    width: 130px;
+    height: 120px;
+    float: left;
+    background: red;
+}
+#middleBoxLeftTop{
+    height: 40px;
+    background: yellow;
+    text-align: center;
+}
+#middleBoxLeftTop p, #middleBoxLeftMiddleLeft p, #middleBoxLeftMiddleRight p, #middleBoxLeftBottom p{
+    font-weight: bold;
+    font-size: large;
+    line-height: 5px;
+}
+
+#middleBoxLeftMiddleLeft{
+    width: 65px;
+    height: 40px;
+    float: left;
+    background: gray;
+    text-align: center;
+}
+#middleBoxLeftMiddleRight{
+    width: 65px;
+    height: 40px;
+    float: left;
+    background: black;
+    color: white;
+    text-align: center;
+}
+#middleBoxLeftBottom{
+    height: 40px;
+    /*float: bottom;*/
+    background: red;
+    text-align: center;
+}
+
+#middleBoxRight{
+    width: 70px;
+    height: 120px;
+    float: left;
+    background: #f441a5;
+}
+#middleBoxRightTop{
+    background: #f441a5;
+    height: 65px;
+    text-align: center;
+}
+#middleBoxRightTop p{
+    font-weight: bold;
+    font-size: large;
+}
+#middleBoxRightBottom{
+    height: 55px;
+    background: #03a9f4;
+    text-align: center;
+}
+#middleBoxRightBottom p{
+    font-weight: bold;
+    font-size: large;
+}
+
+#bottomBox{
+    width: 200px;
+    background: blue;
+    text-align: center;
+}
+#bottomBox p{
+    font-weight: bold;
+    font-size: large;
+}
+
+
+    </style>
+</head>
+<body>
+
+<div id="topBox">
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+</div>
+
+<div id="middleBox">
+
+    <div id="middleBoxLeft">
+        <div id="middleBoxLeftTop"><p>6</p></div>
+        <div id="middleBoxLeftMiddleLeft"><p>8</p></div>
+        <div id="middleBoxLeftMiddleRight"><p>9</p></div>
+        <div id="middleBoxLeftBottom"><p>11</p></div>
+    </div>
+
+    <div id="middleBoxRight">
+        <div id="middleBoxRightTop"><p>7</p></div>
+        <div id="middleBoxRightBottom"><p>10</p></div>
+    </div>
+
+</div>
+
+<div id="bottomBox">
+    <p>12</p>
+</div>
+
+</body>
+</html>

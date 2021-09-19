@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background-color: #cccccc;
+        }
+
+        .container {
+            width: 1000px;
+            height: 560px;
+            margin: 0 auto;
+            background-color: white;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+
+        .container > div > img {
+            float: left;
+        }
+
+        .container > div p {
+            float: left;
+            margin-left: 10px;
+        }
+
+        hr {
+            background-color: red;
+        }
+
+
+        .inputContainer .clearfix div:first-child {
+            float: left;
+            margin-top: 5px;
+        }
+        .inputContainer .clearfix div:nth-child(2){
+            float: left;
+            margin-left: 10px;
+        }
+        .emailContent{
+            margin-top: 10px;
+            margin-left: 240px;
+        }
+        .inputContent{
+            margin-top: 10px;
+            margin-left: 241px;
+        }
+        .imageUsing{
+            width: 300px;
+            height: 60px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="clearfix">
+        <img src="../img/register/email-bg.jpg">
+        <p>注册邮箱账号</p>
+    </div>
+    <hr>
+
+    <div class="inputContainer ">
+        <div class="emailContent clearfix">
+            <div>
+                邮箱账号
+                <input type="text">
+            </div>
+            <div>
+                请输入您常用的电子邮箱
+                <br>
+                <a href="">创建邮箱</a> 或 <a href="">注册普通QQ号</a>
+            </div>
+        </div>
+        <div class="inputContent">
+            昵称
+            <input type="text">
+        </div>
+        <div class="inputContent">
+            密码
+            <input type="text">
+        </div>
+        <div class="inputContent">
+            确认密码
+            <input type="text">
+        </div>
+        <div class="inputContent">
+            性别
+            <input type="radio" name="sex" checked>男
+            <input type="radio" name="sex">女
+        </div>
+        <div class="inputContent">
+            生日
+            <select name="date">
+                <option>公历</option>
+                <option>农历</option>
+            </select>
+            <input type="date">
+        </div>
+
+        <div class="inputContent">
+            所在地
+            <select>
+                <option>中国</option>
+                <option>爱尔兰</option>
+            </select>
+            &nbsp
+            <select>
+                <option>上海</option>
+                <option>爱尔兰之城</option>
+            </select>
+            &nbsp
+            <select>
+                <option>浦东</option>
+                <option>梅努斯</option>
+            </select>
+        </div>
+
+        <div class="inputContent">
+            验证码
+            <img class="imageUsing" src="../img/register/yz.png">
+            请先进行验证
+        </div>
+
+        <div class="inputContent">
+            <input type="checkbox">
+            我已阅读并同意相关服务条款和隐私政策
+            <img src="../img/register/down.jpg">
+        </div>
+
+        <div class="inputContent">
+            <img class="imageUsing" src="../img/register/register.jpg">
+        </div>
+
+
+
+
+    </div>
+
+
+</div>
+
+</body>
+</html>

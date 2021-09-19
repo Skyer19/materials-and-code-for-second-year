@@ -1,0 +1,104 @@
+table.box {
+    width: 1000px;
+    height: 350px;
+    margin: 50px auto;
+    border-color: #a7cbff;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.box tr.header td {
+    height: 32px;
+    background-color: #e2f2ff;
+    border-top: 3px solid #a7cbff;
+}
+
+.box tr.footer td {
+    height: 50px;
+    background-color: #eaeaea;
+}
+
+.box tr.footer div {
+    float: left;
+}
+
+.box tr.footer .delAll {
+    margin: 0px 470px 0px 50px;
+}
+
+.box tr.footer .proTotal {
+    margin-right: 30px;
+}
+
+div span {
+    color: red;
+}
+
+.box td .count {
+    width: 50px;
+}
+
+.box td input {
+    text-align: center;
+}
+
+.proDel {
+    border: none;
+    background-color: transparent;
+
+}
+
+.proMoney {
+    color: red;
+}
+
+.proProductPic {
+    width: 150px;
+    height: 70px;
+    float: right;
+    margin-top: 15px;
+
+}
+
+.plus_minus_button {
+    border: none;
+    background-color: white;
+    cursor: wait;
+}
+
+#pay {
+    background-color: red;
+    margin-left: 70px;
+    width: 100px;
+}
+
+tr:hover {
+    background-color: #CDCDCD;
+}
+
+.popProduct {
+    width: 950px;
+    height: 200px;
+    margin-top: -250px;
+    background: #F09;
+    position: absolute;
+    display: block;
+	margin-left: -600px;
+	opacity: 0.5;
+	visibility: hidden;
+    font-size: 12px;
+    transition: 1s;
+    z-index: 1;
+}
+
+.proTotal:hover .popProduct{
+	color: #868686;
+	visibility: visible;
+	cursor: grab;
+}
+
+
+
+
+
+

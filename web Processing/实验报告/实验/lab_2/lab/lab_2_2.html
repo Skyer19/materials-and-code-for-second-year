@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Baidu</title>
+</head>
+<style>
+    .website{
+        background-color: rgb(242,242,242);
+    }
+    .head{
+        background: url('../img/lab_2_2/bg_logo.png') no-repeat center;
+        width: 100%;
+        height: 170px;
+    }
+    #top_left_all{
+        margin-left:230px;
+    }
+    .top_left{
+        color: rgb(80,80,80);
+        font-size: 10px;
+        margin-left: 10px;
+        text-decoration: none;
+    }
+
+    #input_window{
+        background-color:rgb(80,80,80) ;
+        height: 25px;
+        width: 400px;
+        border: none ;
+        margin-top: 20px;
+        margin-bottom: 5px;
+        margin-right: -10px;
+        vertical-align:middle
+    }
+    #search_icon{
+        display: inline-table;
+        vertical-align: top;
+        background-color:rgb(80,80,80) ;
+        border: none ;
+        height: 23px;
+        width: 40px;
+        margin-left: -10px;
+        margin-top: 20px;
+    }
+    #top_down_information{
+        color: rgb(80,80,80);
+        padding-left: 10px;
+        margin-top: 10px;
+        font-size: 15px;
+    }
+    .mainlink{
+        background-color:white ;
+        width: 68%;
+        height: 36px;
+        padding-top: 8px;
+        border-bottom: 2px solid rgb(0,169,165);
+
+    }
+    .mainlink_items{
+        margin-left: 40px;
+        margin-right: 40px;
+        font-size: 13px;
+        text-decoration: none;
+        color: black;
+    }
+
+    .content{
+        width: 68%;
+        height: 770px;
+        background-color: white;
+        margin-top: 5px;
+    }
+    .left{
+        position: absolute;
+        border: 2px solid rgb(0,169,165);
+        width: 550px;
+        height: 770px;
+    }
+    .right{
+        margin-left:560px;
+       height: 770px;
+        border: 2px solid rgb(0,169,165);
+    }
+    #left_bottom{
+        margin-left: 20px;
+    }
+    #recent_browsing{
+        /*border: 1px solid black;*/
+        width: 530px;
+        margin-left: 22px;
+        margin-top: 20px;
+    }
+    .favorite_pic{
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+        margin-left: 10px;
+        margin-right: 10px;
+        display: inline-block;
+    }
+    #recent_browsing_name{
+        /*border: 1px solid black;*/
+        width: 500px;
+        margin-left: 30px;
+        margin-top: 30px;
+    }
+
+    .rec_bro_name{
+        margin-left: 15px;
+        margin-right: 15px;
+        font-size: 13px;
+    }
+    #recent_browsing_price{
+        /*border: 1px solid black;*/
+        width: 500px;
+        margin-left: 30px;
+        margin-top: 10px;
+    }
+    .rec_bro_price{
+        margin-left: 30px;
+        margin-right: 50px;
+        font-size: 13px;
+    }
+    #right_top_name{
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    .right_top_font{
+        margin-top: 70px;
+        margin-left: 20px;
+    }
+    #right_top_intro{
+        margin-left: 20px;
+    }
+    .right_top_intro_content{
+        font-size: 13px;
+        color: black;
+        margin-left: 20px;
+        margin-bottom: -5px;
+    }
+    #bottom_image_group{
+        width: 68%;
+        height: 100px;
+        margin-top: 20px;
+        /*border: 1px solid black;*/
+    }
+    .bottom_image{
+        width: 100px;
+        height: 100px;
+        margin-left: 30px;
+        margin-right: 30px;
+        display:inline
+    }
+    .footer-main{
+        background: url('../img/lab_2_2/bg_logo.png') no-repeat center;
+        width: 100%;
+        height: 170px;
+        /*border: 1px solid blue;*/
+
+    }
+    .footer_menu{
+        margin-top: 30px;
+        display: inline-block;
+        vertical-align: top;
+        list-style: none;
+        width:130px;
+        color: rgb(0,169,165);
+
+    }
+
+
+
+
+</style>
+
+<body>
+    <div class="website">
+        <div class="head">
+                <div id="top_left_all">
+                    <a href="#" class="top_left">登陆</a>
+                    <a href="#" class="top_left">注册</a>
+                    <a href="#" class="top_left">加入YQ家族</a>
+                    <a href="#" class="top_left">
+                        <img src="../img/lab_2_2/phone_03.png" height="13" width="13"/>
+                        400-6666-888</a>
+                    <a href="#" class="top_left">所在地 北京</a>
+                </div>
+            <div class="topsee">
+                <!--logo-->
+                <div align="center">
+                    <img src="../img/lab_2_2/logo.png" height="49" width="177"/>
+                </div>
+                <!--search winodw-->
+                <div align="center">
+                    <label>
+                     <input id="input_window" type="text" name="input_window" placeholder="搜索你想要的">
+                    </label>
+                <!--search icon-->
+                    <div id="search_icon">
+                    <a href="#"><img  src="../img/lab_2_2/fangdajing_03.png" height="22" width="25"/></a>
+                    </div>
+                </div>
+                <!--top down information-->
+                <div id="top_down_information" align="center">热门搜索：耳环、吊坠、手链</div>
+            </div>
+        </div>
+        <div class="main" align="center">
+            <div class="mainlink" align="center">
+                <a href="#" class="mainlink_items">热推</a>
+                <a href="#"  class="mainlink_items">银饰分类</a>
+                <a href="#"  class="mainlink_items">精选系列</a>
+                <a href="#"  class="mainlink_items">银饰定制</a>
+                <a href="#" class="mainlink_items">礼品中心</a>
+                <a href="#"  class="mainlink_items">品牌故事</a>
+                <a href="#"  class="mainlink_items">会员中心</a>
+            </div>
+
+            <div class="content" align="centers">
+                <!--product pictures and recent browsing-->
+                <div class="left" align="left">
+                        <a style="color: rgb(0,169,165);font-size: 10px">返回饰品分类>耳环>Swan钻石戒指</a>
+                    <!--product pictures-->
+                    <img id="product_pictures" src="../img/lab_2_2/big.png" height="470" width="550"/>
+                    <hr width="90%"/>
+                    <!--recent browsing and your favorite character-->
+                    <div id="left_bottom" align="left">
+                        <a href="#" style="text-decoration: none">你会喜欢</a>
+                        <a href="#" style="color: rgb(0,169,165);text-decoration: none">最近浏览</a>
+                    </div>
+                    <!--recent browsing and your favorite pictures-->
+                    <div id="recent_browsing"
+                        <!--picture 1-->
+                        <div class="favorite_pic">
+                            <a href="#"><img src="../img/lab_2_2/11.png" height="100" width="100"/></a></div>
+                        <!--picture 2-->
+                        <div class="favorite_pic">
+                            <a href="#"><img src="../img/lab_2_2/22.png" height="100" width="100"/></a></div>
+                        <!--picture 3-->
+                        <div class="favorite_pic">
+                            <a href="#"><img src="../img/lab_2_2/33.png" height="100" width="100"/></a></div>
+                        <!--picture 4-->
+                        <div class="favorite_pic">
+                            <a href="#"><img src="../img/lab_2_2/44.png" height="100" width="100"/></a></div>
+                    </div>
+                    <!--recent browsing name-->
+                    <div id="recent_browsing_name" align="center">
+
+                        <a class="rec_bro_name">Nirva纯银</a>
+                        <a class="rec_bro_name">Heart穿孔耳环</a>
+                        <a class="rec_bro_name">Attract纯银戒指</a>
+                        <a class="rec_bro_name">Case纯银手环</a>
+                    </div>
+                    <!--recent browsing price-->
+                    <div id="recent_browsing_price" align="center">
+                        <a class="rec_bro_price">¥675</a>
+                        <a class="rec_bro_price">¥539</a>
+                        <a class="rec_bro_price">¥334.9</a>
+                        <a class="rec_bro_price">¥521</a>
+                    </div>
+                </div>
+
+                <div class="right">
+                    <!--now product name-->
+                    <div id="right_top_name" align="left">
+                        <a>Swan钻石戒指</a>
+                    </div>
+                    <!--now product price-->
+                    <div class="right_top_font" align="left">
+                        <a style="font-size: 50px">¥679</a>
+                    </div>
+                     <!--the number of recent sell-->
+                    <div class="right_top_font" align="left">
+                        <a style="color: black">最近售出：19399</a>
+                    </div>
+                     <hr width="90%"/>
+                    <!--introduction to the goods-->
+                    <div align="left">
+                        <p id="right_top_intro">产品详细</p>
+                        <p class="right_top_intro_content">这款精致迷人、可爱活泼的925银戒指，运用ZIRCON钻加工</p>
+                        <p class="right_top_intro_content">925银材质，结合闪耀珠宝的设计概念，设计出这款戒指。</p>
+                        <p class="right_top_intro_content">ZIRCON钻一致是珠宝设计师们钟爱的元素，它闪烁如钻石的</p>
+                        <p class="right_top_intro_content">品质，是人们钟情于此的主要原因</p>
+                        <ul style="color: black; font-size:15px">
+                            <li>长度：2厘米</li>
+                             <li>产品编号：11818118</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="imggroup">
+                 <div id="bottom_image_group" >
+                        <!--picture 1-->
+                        <div class="bottom_image">
+                            <img src="../img/lab_2_2/111.png" height="80" width="75"/></div>
+                        <!--picture 2-->
+                        <div class="bottom_image">
+                            <img src="../img/lab_2_2/222.png" height="80" width="75"/></div>
+                        <!--picture 3-->
+                        <div class="bottom_image">
+                            <img src="../img/lab_2_2/333.png" height="80" width="75"/></div>
+                        <!--picture 4-->
+                        <div class="bottom_image">
+                            <img src="../img/lab_2_2/444.png" height="80" width="75"/></div>
+                         <!--picture 5-->
+                        <div class="bottom_image">
+                            <img src="../img/lab_2_2/555.png" height="80" width="75"/></div>
+                        <!--picture 6-->
+                        <div class="bottom_image">
+                            <img src="../img/lab_2_2/666.png" height="80" width="75"/></div>
+                        </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-main" align="center">
+                <!--menu 1-->
+                <ul class="footer_menu">
+                    <li>关于我们</li>
+                    <li>权威认证</li>
+                    <li>合作专区</li>
+                    <li>加入我们</li>
+                </ul>
+                <!--menu 2-->
+                <ul class="footer_menu">
+                    <li>购物指南</li>
+                    <li>购买流程</li>
+                    <li>支付方式</li>
+                    <li>配送流程</li>
+                </ul>
+                <!--menu 3-->
+                <ul class="footer_menu">
+                    <li>售后服务</li>
+                    <li>退货流程</li>
+                    <li>办理售后</li>
+                    <li>7天退换</li>
+                </ul>
+                <!--menu 4-->
+                <ul class="footer_menu">
+                    <li>帮助中心</li>
+                    <li>注册流程</li>
+                    <li>联系客服</li>
+                    <li>网站地图</li>
+                </ul>
+                <!--menu 5-->
+                <ul class="footer_menu">
+                    <li>服务条款</li>
+                    <li>终身保养</li>
+                    <li>注册协议</li>
+                    <li>隐私声明</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>

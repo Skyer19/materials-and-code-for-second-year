@@ -1,0 +1,363 @@
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.header {
+    background: black;
+    width: 100%;
+    height: 50px;
+}
+
+#menu_pic {
+    width: 200px;
+    height: 50px;
+    float: left;
+    margin-left: 3%;
+    margin-top: 7px;
+}
+
+.menu {
+    padding-top: 13px;
+    width: 400px;
+    height: 40px;
+    float: left;
+    margin-left: 20%;
+
+}
+
+.menu_func {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.menu_func:hover {
+    color: red;
+}
+
+#likely_person {
+    width: 50px;
+    height: 40px;
+    float: left;
+    margin-top: 5px;
+    margin-left: 8%;
+
+}
+
+.menu_regi_sign {
+    color: rgb(0, 169, 165);
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+#menu_register_sign {
+    padding-top: 15px;
+    font-size: 13px;
+}
+
+.production {
+    background-color: rgb(245, 245, 245);
+    height: 110px;
+    width: 100%;
+}
+
+.production_detail {
+    height: 100px;
+    width: 100%;
+    float: left;
+    margin-left: 10%;
+
+}
+
+.productions {
+    height: 96px;
+    width: 70px;
+    float: left;
+    margin-top: 5px;
+    margin-left: 60px;
+
+}
+
+.productions:hover {
+    border-bottom: 3px solid red
+}
+
+.production_name {
+    color: black;
+    font-size: 3px;
+
+}
+
+.banner {
+    width: 100%;
+    height: 450px;
+    background: url("../img/banner.jpg") no-repeat center;
+    background-size: 100% 100%;
+}
+.banner_p{
+    margin-left: 45%;
+    padding-top: 28%;
+}
+.banner_s{
+    color: rgb(245, 245, 245);
+    display: inline-block
+}
+.banner_s:hover{
+    color: red;
+}
+
+.video {
+    width: 100%;
+    height: 230px;
+    background: rgb(245, 245, 245);
+    margin-top: 5px;
+    padding-bottom: 10px;
+}
+
+#video_pic_all {
+    margin-left: 245px;
+    width: 1200px;
+    height: 200px;
+}
+
+.video_pic {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background: darkseagreen;
+    float: left;
+    margin-left: 5px;
+}
+
+.mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 200px;
+    /*background: rgba(0, 0, 0，1);*/
+    /*color: red;*/
+
+    /*opacity: 1;*/
+    /*transition: all 1s;*/
+    /*display: none;*/
+}
+
+/*.video_pic:hover{*/
+/*    background: rgba(0,0,0,0.7);*/
+/*}*/
+.mask_content {
+    margin-top: 50px;
+    width: 100px;
+    height: 150px;
+    color: white;
+    font-size: 10px;
+    opacity: 0;
+    transition: all 1s;
+}
+.video_pic:hover .mask{
+    background: rgba(0,0,0,0.5);
+}
+.video_pic:hover .mask_content{
+    transform: scale(1.1);
+    opacity: 1;
+}
+.new {
+    margin-top: -20px;
+    width: 100%;
+    height: 930px;
+    background: rgb(245, 245, 245);
+}
+
+.new_headline {
+    margin-top: 20px;
+    /*margin-left: 48%;*/
+}
+
+/*nubia z11*/
+.nubia_z11 {
+    width: 64%;
+    height: 230px;
+    background: white;
+    margin-left: 250px;
+}
+
+.nubia_z11 #container1 {
+    padding-top: 50px;
+    padding-left: 80px;
+    width: 470px;
+    height: 150px;
+    float: left;
+    transform-style: preserve-3d;
+    transition: 1s linear;
+}
+
+.nubia_z11:hover #container1 {
+    transform: translate(50px);
+}
+
+.nubia_z11 #introduction1 {
+    padding-top: 50px;
+    margin-left: 160px;
+    float: left;
+}
+
+/*nubia z11 minis left*/
+.nubia_z11_minis_left {
+    position: absolute;
+    margin-top: 10px;
+    width: 300px;
+    height: 600px;
+    margin-left: 250px;
+    background: white;
+}
+
+.nubia_z11_minis_left #container2 {
+    padding-left: 30px;
+    padding-top: 20px;
+    transition: all 1s;
+}
+
+.nubia_z11_minis_left:hover #container2 {
+    transform: scale(1.05);
+}
+
+.nubia_z11_minis_right {
+    width: 600px;
+    height: 300px;
+    background: white;
+    margin-left: 560px;
+    margin-top: 10px;
+
+}
+
+.nubia_z11_minis_right #container3 {
+    padding-left: 100px;
+    padding-top: 20px;
+    transition: linear 1s;
+}
+
+.nubia_z11_minis_right:hover #container3 {
+    transform: translate(70px);
+}
+
+.nubia_z11_max {
+    width: 290px;
+    height: 290px;
+    background: white;
+    margin-left: 560px;
+    margin-top: 10px;
+    float: left;
+}
+
+.nubia_z11_max #container4 {
+    padding-left: 100px;
+    padding-top: 20px;
+    transition: all 1s;
+}
+.nubia_z11_max:hover #container4 {
+    transform: scale(1.1);
+}
+
+.nubia_z11_mini {
+    width: 300px;
+    height: 290px;
+    background: white;
+    margin-left: 10px;
+    margin-top: 10px;
+    float: left;
+}
+.nubia_z11_mini #container5 {
+    padding-left: 100px;
+    padding-top: 20px;
+    transition: all 1s;
+}
+.nubia_z11_mini:hover #container5 {
+    transform: scale(1.1);
+}
+.accessory{
+    margin-top: -20px;
+    width: 100%;
+    height: 330px;
+    background: rgb(245, 245, 245);
+
+}
+.parts{
+    width: 64%;
+    height: 230px;
+    /*background: white;*/
+    margin-left: 250px;
+}
+.part{
+    width: 210px;
+    height: 200px;
+    float: left;
+    background: white;
+    margin-left: 8px;
+    margin-right: 7px;
+    margin-top: 30px;
+}
+.part_name{
+    font-size: 10px;
+    margin-left: 40px;
+}
+.part_content{
+    margin-top: 20px;
+    transition: all 1s;
+    margin-left: 40px;
+
+}
+.part_content:hover{
+    transform: scale(1.1);
+}
+.allPhone{
+    width: 100%;
+    height: 200px;
+    /*background: antiquewhite;*/
+    margin-top: 30px;
+}
+    .footer_menu{
+        margin-top: 30px;
+        display: inline-block;
+        vertical-align: top;
+        list-style: none;
+        width:130px;
+        font-size: 10px;
+        color: rgb(183,174,180);
+    }
+    .info{
+        padding-left: 140px;
+        float: left;
+    }
+    .info_left{
+        font-size: 10px;
+        color: rgb(183,174,180);
+    }
+    .info_pic{
+        padding-left: 100px;
+        width: 150px;
+        height: 50px;
+        margin-top: -15px;
+        float: left;
+    }
+    .info_num{
+        font-size: 18px;
+        /*padding-left: 140px;*/
+        float: left;
+        margin-left: 10px;
+        color: rgb(183,174,180);
+    }
+    .copy_font{
+        padding-left: 140px;
+        padding-top: 50px;
+        color: rgb(183,174,180);
+        font-size: 12px;
+
+    }
+    .copy_paddle{
+         color: rgb(183,174,180);
+        font-size: 12px;
+    }

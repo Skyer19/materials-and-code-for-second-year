@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--    <script src="http://code.jquery.com/jquery-latest.js"></script>-->
+    <link rel="stylesheet" href="../css/login.css">
+    <script>
+
+        /*
+说明：显示错误信息函数
+参数 eId：要显示div的id
+参数 msg：要显示的信息内容
+*/
+        function showErrorMsg(eId, msg) {
+            document.getElementById(eId).innerHTML = msg;
+            document.getElementById(eId).style.display = "";
+        }
+
+        //隐藏错误信息div方法
+        /*
+        说明：隐藏错误信息函数
+        参数eId：要隐藏的div的id
+        */
+        function clearMsg(eId) {
+            document.getElementById(eId).style.display = "none";
+        }
+
+        /*
+用户名
+失去焦点时验证是否符合规则
+参数UName：用户输入的用户名
+参数eId：错误提示div的id
+返回值：若符合要求：返回true，不符合：返回false；
+*/
+        function verifyUName(UName, eId) {
+            var msg = "";
+            var strUserName = UName.trim();
+            //用户名必须6~20位.
+            if (strUserName.length < 3 || strUserName.length > 12) {
+                msg = "<font color='red'>用户名必须3~12位</font>";
+                showErrorMsg(eId, msg);
+                return false;
+            }
+            //使用正则表达式验证
+            var pattern = /^[a-zA-Z0-9]{3,12}$/
+            if (pattern.test(strUserName)) {
+                clearMsg(eId);
+                return true;
+            } else {
+                msg = "<font color='red'>用户名输入错误</font>";
+                showErrorMsg(eId, msg);
+                return false;
+            }
+        }
+
+        function verifyPass(pwd, eId) {
+            var msg = "";
+            var strPwd = pwd.trim();
+            if (strPwd.length <1) {
+                msg = "<font color='red'>密码不能为空</font>";
+                showErrorMsg(eId, msg);
+                return false;
+            }
+            //密码必须6~18位.
+            if (strPwd.length < 6 || strPwd.length > 18) {
+                msg = "<font color='red'>密码必须6~18位</font>";
+                showErrorMsg(eId, msg);
+                return false;
+            }
+            //使用正则表达式验证
+            var pattern = /^[a-zA-Z0-9]{6,18}$/;
+            if (pattern.test(strPwd)) {
+                clearMsg(eId);
+                return true;
+            } else {
+                msg = "<font color='red'>密码格式不错误</font>";
+                showErrorMsg(eId, msg);
+                return false;
+            }
+        }
+
+        function verifyRePass(pwd, pwd1, eId) {
+            var msg = "";
+            var strPwd1 = pwd.trim();
+            var strPwd2 = pwd1.trim();
+            //密码必须6~20位.
+            if (strPwd1 != strPwd2) {
+                msg = "<font color='red'>两次密码输入不一致</font>";
+                showErrorMsg(eId, msg);
+                return false;
+            } else {
+                clearMsg(eId);
+                return true;
+            }
+        }
+
+        function verifyChecked(checkName, eId) {
+            let check = document.getElementById(checkName);
+            if (check.checked) {
+                return true;
+            }else {
+                msg = "<font color='red'>请选择</font>";
+                showErrorMsg(eId, msg);
+                return false;
+            }
+        }
+
+        function verifyInput() {
+            //通过表单名称，得到输入表单
+            var form = document.form_register;
+            //以此验证
+            if (verifyUName(form.txt_Uname.value, 'div_uname') &&
+                verifyPass(form.txt_Pwd1.value, 'div_pwd1') &&
+                verifyRePass(form.txt_Pwd1.value, form.txt_Pwd2.value, 'div_pwd2') &&
+                verifyChecked(form.check_name.value,'div_check')) {
+                alert("恭喜，注册成功");
+                form.submit;
+                return true;
+            } else {
+                alert("注册失败，请根据红色提示修改");
+                return false;
+            }
+        }
+    </script>
+
+</head>
+<body class="login_page_top">
+<div class="window" align="center">
+    <div class="window_content">
+        <form name="form_register" action="../../lab_4/lab/lab_4.html" onSubmit="return check()" method="post">
+            <label class="label">昵称:<input type="text" name="txt_Uname" id="txt_Uname" onfocus="clearMsg('div_uname');"
+                                           onblur="verifyUName(txt_Uname.value,'div_uname');"/></label>
+            <div width="200" height="50">
+                <div id="div_uname"></div>&nbsp;
+            </div>
+            <p class="notice">3-12位字符（字母、数字0，不区分大小写</p>
+            所在地区：
+            <label>
+                <select name="province">
+                    <option value="请选择">请选择</option>
+                    <option value="saab">福建</option>
+                    <option value="fiat">其他</option>
+                </select>
+            </label>
+            省
+            <label>
+                <select name="city">
+                    <option value="请选择">请选择</option>
+                    <option value="saab">福州</option>
+                    <option value="fiat">其他</option>
+                </select>
+            </label>
+            市
+
+            <p>设置安全信息 <a style="color: red"><strong>以下信息对保护你的账户极为重要，请慎重填写并记牢</strong></a></p>
+            <label class="label">小米登陆密码<input type="password" name="txtPwd1" type="password" id="txt_Pwd1"
+                                              onblur="verifyPass(txt_Pwd1.value,'div_pwd1');"
+                                              onfocus="clearMsg('div_pwd1');"/></label>
+            <div width="200" height="50">
+                <div id="div_pwd1"></div>&nbsp;
+            </div>
+            <p class="notice">6-18位字符（字母、数字0，不区分大小写</p>
+            <label class="label">再次输入密码<input name="txt_Pwd2" type="password" id="txt_Pwd2"
+                                              onfocus="clearMsg('div_pwd2')"
+                                              onblur="verifyRePass(txt_Pwd1.value,txt_Pwd2.value,'div_pwd2');"/></label><br>
+            <div width="200" height="50">
+                <div id="div_pwd2"></div>&nbsp;
+            </div>
+            <label class="label"><input type="checkbox" name="check_name" id="check_name" onfocus="clearMsg('div_check')"
+                                              onblur="verifyChecked('check_name','div_check');"/>我已经看过并同意<a href="#">《小米网络使用说明书》</a>和<a
+                    href="#">《小米网络邮箱服务条款》</a></label><br>
+            <div width="200" height="50">
+                <div id="div_check"></div>&nbsp;
+            </div>
+            <label><input type="submit" value="提交" onclick="return verifyInput()"/></label>
+        </form>
+    </div>
+</div>
+<div align="center" class="login_page_qr">
+    <img src="../img/logoicon.png" height="167" width="167"/></div>
+<div class="login_page_bottom" align="center">
+    <p>客户联系电话<a href="#" id="phone_num"> 000-0000-0000 </a>欢迎批评指正</p>
+</div>
+<div align="center">
+    <ul id="nav">
+        <li><a href="#">小米简介 |</a></li>
+        <li><a href="#">about slina |</a></li>
+        <li><a href="#">广告服务 |</a></li>
+        <li><a href="#">联系我们 |</a></li>
+        <li><a href="#">招聘信息 |</a></li>
+        <li><a href="#">网站律师 |</a></li>
+        <li><a href="#">english |</a></li>
+        <li><a href="#">会员注册 |</a></li>
+        <li><a href="#">产品答疑</a></li>
+    </ul>
+    <p id="copyright"> &copy;Copyright 1996-2011 SINA Corporation, all right Reserved 小米公司<a href="#">版权所有</a></p>
+</div>
+
+</body>
+</html>
